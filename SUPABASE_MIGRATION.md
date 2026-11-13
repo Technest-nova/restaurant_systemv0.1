@@ -1,16 +1,42 @@
-# Moving from mock data to Supabase
+# Supabase backend
 
-The screens never touch localStorage directly. They read state with `useAppState()` and write through `actions` in `src/lib/store.ts`. To switch to Supabase you change the store, not the screens.
+The app runs on Supabase Auth + Postgres. Screens read with `useAppState()` and write through
+`actions` in `src/lib/store.ts`; that file is the only place that talks to the database.
 
-## Steps
+## One-time setup
 
-1. Create the project and run `supabase/schema.sql` in the SQL editor.
-2. `npm i @supabase/supabase-js @supabase/ssr` and add `NEXT_PUBLIC_SUPABASE_URL` / `NEXT_PUBLIC_SUPABASE_ANON_KEY` to `.env.local`.
-3. **Auth**: replace `actions.signUp / logIn / logOut` with `supabase.auth.signUp`, `signInWithPassword`, `signInWithOAuth({ provider: 'google' })`, `signOut`. Replace the password-reset mock in `src/app/login/page.tsx` with `supabase.auth.resetPasswordForEmail`. Move the route guard in `components/app/app-shell.tsx` to Next.js middleware.
-4. **Data**: for each action, swap the `set(...)` body for an insert/update/delete on the matching table (table names are noted in comments above each action). Keep the in-memory `state` as a cache, or move reads to React Query/SWR.
-5. **Sales imports**: insert `sales_imports` then bulk insert `sales_rows` (batches of ~1,000). Aggregations in `lib/calc.ts` can stay client-side for the MVP; move them into a SQL view or RPC once data grows.
-6. **Billing**: replace `components/app/checkout-dialog.tsx` with Paddle.js `Paddle.Checkout.open(...)`. Add a Paddle webhook (Edge Function or Next.js route) that writes `subscriptions.status` using the service role key. Remove the "Test controls" card in Settings.
-7. **Weekly email**: a scheduled Edge Function that, per restaurant on its `report_day`, computes the numbers from `weeklyEmailNumbers()` (port to SQL or reuse the TS) and sends them with Resend or Postmark.
-8. **Data retention**: a scheduled job that deletes data for accounts unpaid for more than 30 days after `trial_ends_at`.
+1. **Database**: Supabase → SQL Editor → paste `supabase/migrations/001_app_setup.sql` → Run.
+   It is idempotent (safe to re-run) and creates all tables, indexes, row-level security,
+   and a trigger that gives every new user a restaurant, default delivery platforms and a 14-day trial.
+2. **Env vars**: see `.env.example`. `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`
+   go in `.env.local`; `SUPABASE_SECRET_KEY` (server only) can live in `.env` or `.env.local`.
+3. **Auth → URL Configuration**: Site URL `http://localhost:3000` (your domain in production).
+   Add redirect URLs `http://localhost:3000/auth/callback` and `https://YOUR-DOMAIN/auth/callback`.
+4. **Auth → Providers → Email**: keep "Confirm email" on for production. With it on, sign-up shows
+   "check your email" and the link lands on `/auth/callback` → onboarding.
+5. **Google sign-in (optional)**: Auth → Providers → Google, paste a Google OAuth client ID/secret.
+   In Google Cloud, the authorised redirect URI is `https://YOUR-PROJECT-REF.supabase.co/auth/v1/callback`.
 
-The two sales "sources" map to parsers in `lib/csv.ts`; a future Square API integration should produce the same `ParsedSale` rows.
+## How it fits together
+
+| Piece | File |
+|---|---|
+| Browser client | `src/lib/supabase/client.ts` |
+| Server client + admin (secret key) | `src/lib/supabase/server.ts` |
+| Session refresh + route guard | `src/middleware.ts`, `src/lib/supabase/middleware.ts` |
+| Email confirm / OAuth / reset links | `src/app/auth/callback/route.ts` |
+| New password form | `src/app/reset-password/page.tsx` |
+| Test billing (writes `subscriptions` with secret key) | `src/app/api/billing/test/route.ts` |
+| Delete account (cascades all data) | `src/app/api/account/delete/route.ts` |
+
+Writes are optimistic: the UI updates instantly, then a serial queue persists to Supabase.
+On any error the user gets a toast and the cache reloads from the database.
+
+## Still to do before launch
+
+- **Billing**: replace `checkout-dialog.tsx` with Paddle.js and add a Paddle webhook route that updates
+  `subscriptions` via `supabaseAdmin()`. The test route is disabled in production builds.
+- **Weekly email**: scheduled Edge Function using `weeklyEmailNumbers()` + Resend/Postmark.
+- **Custom SMTP**: Supabase's built-in email sender is rate-limited; set up SMTP under Auth → Emails.
+- **Scale**: sales rows are loaded client-side (paged, 1,000 per request). Move aggregations in
+  `lib/calc.ts` to SQL views/RPCs when restaurants exceed ~100k rows.

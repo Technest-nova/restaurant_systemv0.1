@@ -445,6 +445,16 @@ export function fmtDate(iso: string) {
   })
 }
 
-export function uid(prefix = "id") {
-  return `${prefix}_${Math.random().toString(36).slice(2, 10)}${Date.now().toString(36).slice(-4)}`
+/** UUID v4 (matches the uuid primary keys in Supabase). `prefix` is kept for call-site readability only. */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export function uid(prefix = "id"): string {
+  const c = typeof globalThis !== "undefined" ? (globalThis.crypto as Crypto | undefined) : undefined
+  if (c?.randomUUID) return c.randomUUID()
+  const b = new Uint8Array(16)
+  if (c?.getRandomValues) c.getRandomValues(b)
+  else for (let i = 0; i < 16; i++) b[i] = Math.floor(Math.random() * 256)
+  b[6] = (b[6] & 0x0f) | 0x40
+  b[8] = (b[8] & 0x3f) | 0x80
+  const h = [...b].map((x) => x.toString(16).padStart(2, "0")).join("")
+  return `${h.slice(0, 8)}-${h.slice(8, 12)}-${h.slice(12, 16)}-${h.slice(16, 20)}-${h.slice(20)}`
 }

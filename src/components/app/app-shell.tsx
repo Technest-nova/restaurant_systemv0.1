@@ -121,9 +121,10 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         variant="ghost"
         size="sm"
         className="w-full justify-start"
-        onClick={() => {
-          actions.logOut()
-          router.push("/login")
+        onClick={async () => {
+          await actions.logOut()
+          router.replace("/login")
+          router.refresh()
         }}
       >
         <LogOut /> Log out

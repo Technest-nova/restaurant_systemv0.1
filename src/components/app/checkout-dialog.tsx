@@ -15,7 +15,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { fmtMoney } from "@/lib/calc"
 import { PLAN } from "@/lib/config"
-import { actions, useAppState } from "@/lib/store"
+import { actions, getState, useAppState } from "@/lib/store"
 
 /**
  * Mock of the Paddle overlay checkout. Replace with Paddle.js:
@@ -27,14 +27,12 @@ export function CheckoutDialog({ open, onOpenChange }: { open: boolean; onOpenCh
   const [busy, setBusy] = React.useState(false)
   const price = PLAN.monthly[restaurant.currency]
 
-  function pay() {
+  async function pay() {
     setBusy(true)
-    setTimeout(() => {
-      actions.setSubscription("active")
-      setBusy(false)
-      onOpenChange(false)
-      toast.success("Subscription active. Thanks for subscribing!")
-    }, 900)
+    await actions.setSubscription("active")
+    setBusy(false)
+    onOpenChange(false)
+    if (getState().account?.subscriptionStatus === "active") toast.success("Subscription active. Thanks for subscribing!")
   }
 
   return (

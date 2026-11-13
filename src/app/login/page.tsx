@@ -42,6 +42,17 @@ function AuthForm() {
   const [error, setError] = React.useState("")
   const [resetOpen, setResetOpen] = React.useState(false)
   const [resetEmail, setResetEmail] = React.useState("")
+  const [busy, setBusy] = React.useState(false)
+  const [confirmSent, setConfirmSent] = React.useState("")
+  const next = (() => {
+    const n = params.get("next")
+    return n && n.startsWith("/") && !n.startsWith("//") ? n : "/dashboard"
+  })()
+
+  React.useEffect(() => {
+    const err = params.get("error")
+    if (err) setError(err)
+  }, [params])
 
   function validate(): boolean {
     if (!/^\S+@\S+\.\S+$/.test(email)) {
@@ -56,31 +67,69 @@ function AuthForm() {
     return true
   }
 
-  function signUp(e: React.FormEvent) {
+  async function signUp(e: React.FormEvent) {
     e.preventDefault()
     if (!validate()) return
-    actions.signUp(email.trim(), name.trim())
-    toast.success("Account created. Your 14-day trial has started.")
-    router.push("/onboarding")
-  }
-
-  function logIn(e: React.FormEvent) {
-    e.preventDefault()
-    if (!validate()) return
-    if (actions.logIn(email.trim()) === "no_account") {
-      setError("No account found with that email on this browser. Sign up first.")
+    setBusy(true)
+    const res = await actions.signUp(email.trim(), password, name.trim())
+    setBusy(false)
+    if (!res.ok) return setError(res.error)
+    if (res.needsConfirmation) {
+      setConfirmSent(email.trim())
       return
     }
-    router.push("/dashboard")
+    toast.success("Account created. Your 14-day trial has started.")
+    router.replace("/onboarding")
+    router.refresh()
   }
 
-  function google() {
-    const e = email.trim() || "owner@gmail.com"
-    if (actions.logIn(e) === "ok") router.push("/dashboard")
-    else {
-      actions.signUp(e, name || "Restaurant owner", "google")
-      router.push("/onboarding")
+  async function logIn(e: React.FormEvent) {
+    e.preventDefault()
+    if (!validate()) return
+    setBusy(true)
+    const res = await actions.logIn(email.trim(), password)
+    setBusy(false)
+    if (!res.ok) return setError(res.error)
+    router.replace(next)
+    router.refresh()
+  }
+
+  async function google() {
+    setBusy(true)
+    const res = await actions.signInWithGoogle(next)
+    if (!res.ok) {
+      setBusy(false)
+      setError(res.error)
     }
+    // on success the browser is redirected to Google
+  }
+
+  async function sendReset() {
+    if (!/^\S+@\S+\.\S+$/.test(resetEmail)) return toast.error("Enter a valid email address.")
+    setBusy(true)
+    const res = await actions.sendPasswordReset(resetEmail.trim())
+    setBusy(false)
+    if (!res.ok) return toast.error(res.error)
+    setResetOpen(false)
+    toast.success(`If an account exists for ${resetEmail}, a reset link is on its way.`)
+  }
+
+  if (confirmSent) {
+    return (
+      <Card className="w-full max-w-md">
+        <CardHeader className="text-center">
+          <CardTitle className="text-xl">Check your email</CardTitle>
+          <CardDescription>
+            We sent a confirmation link to <strong>{confirmSent}</strong>. Click it to activate your account and start your 14-day trial.
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="grid gap-2">
+          <Button variant="outline" onClick={() => { setConfirmSent(""); setTab("login") }}>
+            Back to log in
+          </Button>
+        </CardContent>
+      </Card>
+    )
   }
 
   return (
@@ -98,7 +147,7 @@ function AuthForm() {
             <TabsTrigger value="signup">Sign up</TabsTrigger>
           </TabsList>
 
-          <Button variant="outline" className="w-full" onClick={google} type="button">
+          <Button variant="outline" className="w-full" onClick={google} type="button" disabled={busy}>
             <GoogleIcon /> Continue with Google
           </Button>
           <div className="my-4 flex items-center gap-3 text-xs text-muted-foreground">
@@ -121,7 +170,7 @@ function AuthForm() {
                 <Input id="password" type="password" autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)} />
               </div>
               {error && <p className="text-sm text-destructive">{error}</p>}
-              <Button type="submit" className="w-full">Log in</Button>
+              <Button type="submit" className="w-full" disabled={busy}>{busy ? "Logging in…" : "Log in"}</Button>
             </form>
           </TabsContent>
 
@@ -141,7 +190,7 @@ function AuthForm() {
                 <p className="text-xs text-muted-foreground">At least 8 characters.</p>
               </div>
               {error && <p className="text-sm text-destructive">{error}</p>}
-              <Button type="submit" className="w-full">Create account</Button>
+              <Button type="submit" className="w-full" disabled={busy}>{busy ? "Creating account…" : "Create account"}</Button>
               <p className="text-center text-xs text-muted-foreground">
                 By signing up you agree to the Terms and Privacy Policy.
               </p>
@@ -158,13 +207,7 @@ function AuthForm() {
           </DialogHeader>
           <Input type="email" placeholder="you@restaurant.co.uk" value={resetEmail} onChange={(e) => setResetEmail(e.target.value)} />
           <DialogFooter>
-            <Button
-              onClick={() => {
-                if (!/^\S+@\S+\.\S+$/.test(resetEmail)) return toast.error("Enter a valid email address.")
-                setResetOpen(false)
-                toast.success(`Reset link sent to ${resetEmail} (mock)`)
-              }}
-            >
+            <Button onClick={sendReset} disabled={busy}>
               Send reset link
             </Button>
           </DialogFooter>

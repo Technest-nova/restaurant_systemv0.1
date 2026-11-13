@@ -375,18 +375,18 @@ function BillingPanel({ locked = false }: { locked?: boolean }) {
       <Card className="border-dashed">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-sm">
-            <Wrench className="size-4" /> Test controls (mock only)
+            <Wrench className="size-4" /> Test controls (test mode)
           </CardTitle>
           <CardDescription>Simulate billing states to test the trial lock. Remove when Paddle is connected.</CardDescription>
         </CardHeader>
         <CardContent className="flex flex-wrap gap-2">
-          <Button size="sm" variant="outline" onClick={() => { actions.endTrialNow(); toast("Trial ended") }}>
+          <Button size="sm" variant="outline" onClick={async () => { await actions.endTrialNow(); toast("Trial ended") }}>
             End trial now
           </Button>
-          <Button size="sm" variant="outline" onClick={() => { actions.restartTrial(); toast("Trial restarted"); router.push("/dashboard") }}>
+          <Button size="sm" variant="outline" onClick={async () => { await actions.restartTrial(); toast("Trial restarted"); router.push("/dashboard") }}>
             Restart 14-day trial
           </Button>
-          <Button size="sm" variant="outline" onClick={() => { actions.setSubscription("canceled"); toast("Subscription cancelled") }}>
+          <Button size="sm" variant="outline" onClick={async () => { await actions.setSubscription("canceled"); toast("Subscription cancelled") }}>
             Cancel subscription
           </Button>
         </CardContent>
@@ -410,8 +410,8 @@ function BillingPanel({ locked = false }: { locked?: boolean }) {
           <DialogFooter>
             <Button
               variant="destructive"
-              onClick={() => {
-                actions.setSubscription("canceled")
+              onClick={async () => {
+                await actions.setSubscription("canceled")
                 setPortal(false)
                 toast("Subscription cancelled")
               }}
@@ -432,6 +432,7 @@ function DataPanel() {
   const state = useAppState()
   const router = useRouter()
   const [confirm, setConfirm] = React.useState<null | "clear" | "reset">(null)
+  const [busy, setBusy] = React.useState(false)
   return (
     <div className="grid max-w-2xl gap-6">
       <Card>
@@ -444,9 +445,13 @@ function DataPanel() {
         <CardFooter className="border-t">
           <Button
             variant="outline"
-            onClick={() => {
-              actions.loadSampleData()
-              toast.success("Sample data loaded")
+            disabled={busy}
+            onClick={async () => {
+              setBusy(true)
+              const id = toast.loading("Loading sample data…")
+              await actions.loadSampleData()
+              setBusy(false)
+              toast.success("Sample data loaded", { id })
               router.push("/dashboard")
             }}
           >
@@ -458,7 +463,7 @@ function DataPanel() {
         <CardHeader>
           <CardTitle>Danger zone</CardTitle>
           <CardDescription>
-            {state.ingredients.length} ingredients · {state.dishes.length} dishes · {state.sales.length.toLocaleString()} sales rows · stored in this browser
+            {state.ingredients.length} ingredients · {state.dishes.length} dishes · {state.sales.length.toLocaleString()} sales rows · stored securely in your account
           </CardDescription>
         </CardHeader>
         <CardFooter className="flex-wrap gap-2 border-t">
@@ -466,7 +471,7 @@ function DataPanel() {
             Clear ingredients, dishes & sales
           </Button>
           <Button variant="destructive" onClick={() => setConfirm("reset")}>
-            Delete account (reset app)
+            Delete account
           </Button>
         </CardFooter>
       </Card>
@@ -482,18 +487,24 @@ function DataPanel() {
             </Button>
             <Button
               variant="destructive"
-              onClick={() => {
+              disabled={busy}
+              onClick={async () => {
+                setBusy(true)
                 if (confirm === "reset") {
-                  actions.resetEverything()
-                  router.push("/")
+                  const res = await actions.deleteAccount()
+                  setBusy(false)
+                  if (!res.ok) return toast.error(res.error)
+                  toast.success("Your account and all data were deleted")
+                  router.replace("/")
                 } else {
-                  actions.clearBusinessData()
+                  await actions.clearBusinessData()
+                  setBusy(false)
                   toast.success("Data cleared")
                 }
                 setConfirm(null)
               }}
             >
-              Yes, continue
+              {busy ? "Working…" : "Yes, continue"}
             </Button>
           </DialogFooter>
         </DialogContent>

@@ -24,6 +24,7 @@ export default function OnboardingPage() {
   const { account, loggedIn, restaurant: r } = useAppState()
   const router = useRouter()
   const [step, setStep] = React.useState(0)
+  const [busy, setBusy] = React.useState(false)
 
   React.useEffect(() => {
     if (!hydrated) return
@@ -36,9 +37,10 @@ export default function OnboardingPage() {
   const tax = COUNTRY_DEFAULTS[r.country].taxName
   const sym = currencySymbol(r.currency)
 
-  function finish() {
+  async function finish() {
+    setBusy(true)
     if (!r.name.trim()) actions.updateRestaurant({ name: "My restaurant" })
-    actions.completeOnboarding()
+    await actions.completeOnboarding()
     router.push("/dashboard")
   }
 
@@ -48,9 +50,11 @@ export default function OnboardingPage() {
     else finish()
   }
 
-  function loadSample() {
-    actions.loadSampleData()
-    toast.success("Sample restaurant loaded. Explore freely; you can clear it in Settings.")
+  async function loadSample() {
+    setBusy(true)
+    const id = toast.loading("Loading the sample restaurant…")
+    await actions.loadSampleData()
+    toast.success("Sample restaurant loaded. Explore freely; you can clear it in Settings.", { id })
     router.push("/dashboard")
   }
 
@@ -174,7 +178,7 @@ export default function OnboardingPage() {
         </CardContent>
 
         <CardFooter className="flex flex-col-reverse gap-3 border-t sm:flex-row sm:justify-between">
-          <Button variant="ghost" onClick={loadSample} className="text-primary">
+          <Button variant="ghost" onClick={loadSample} className="text-primary" disabled={busy}>
             <Sparkles /> Load sample data
           </Button>
           <div className="flex w-full gap-2 sm:w-auto">
@@ -186,7 +190,7 @@ export default function OnboardingPage() {
             <Button variant="ghost" onClick={() => (step < STEPS.length - 1 ? setStep(step + 1) : finish())}>
               Skip
             </Button>
-            <Button onClick={next} className="flex-1 sm:flex-none">
+            <Button onClick={next} className="flex-1 sm:flex-none" disabled={busy}>
               {step < STEPS.length - 1 ? "Next" : "Finish setup"}
             </Button>
           </div>
