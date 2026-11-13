@@ -9,7 +9,7 @@ Stack: Next.js 15 (App Router) · TypeScript · Tailwind CSS v4 · shadcn/ui (Ra
 ```bash
 npm install
 npm run dev
-```
+```'''''
 
 Open http://localhost:3000.
 
