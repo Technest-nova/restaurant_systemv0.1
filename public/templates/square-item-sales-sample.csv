@@ -1,0 +1,178 @@
+Date,Time,Category,Item,Qty,Price Point Name,SKU,Modifiers Applied,Gross Sales,Discounts,Net Sales,Tax,Transaction ID,Dining Option,Location,Event Type
+06/11/2026,21:03,Mains,Fish n Chips,1,Regular,,,£18.34,£0.00,£18.34,£3.06,T19494,Uber Eats,The Copper Pot,Payment
+06/11/2026,16:37,Desserts,Sticky Toffee Pud,3,Regular,,,£21.75,£0.00,£21.75,£3.62,T17602,Dine In,The Copper Pot,Payment
+06/11/2026,12:27,Drinks,Coke Can,1,Regular,,,£2.50,£0.00,£2.50,£0.42,T64810,Dine In,The Copper Pot,Payment
+06/11/2026,19:27,Burgers,Cheeseburger,1,Regular,,,£13.50,£0.00,£13.50,£2.25,T17747,Dine In,The Copper Pot,Payment
+06/11/2026,14:40,Desserts,Sticky Toffee Pud,3,Regular,,,£21.75,£0.00,£21.75,£3.62,T92238,Dine In,The Copper Pot,Payment
+06/11/2026,20:25,Drinks,Coke Can,1,Regular,,,£2.88,£0.00,£2.88,£0.48,T16499,Just Eat,The Copper Pot,Payment
+06/11/2026,13:18,Burgers,Chkn Burger,1,Regular,,,£14.37,£0.00,£14.37,£2.40,T64937,Just Eat,The Copper Pot,Payment
+06/11/2026,20:19,Burgers,Chkn Burger,3,Regular,,,£37.50,£0.00,£37.50,£6.25,T83434,Dine In,The Copper Pot,Payment
+06/11/2026,20:36,Desserts,Sticky Toffee Pud,1,Regular,,,£7.25,£0.00,£7.25,£1.21,T93743,Dine In,The Copper Pot,Payment
+06/11/2026,19:45,Burgers,Chkn Burger,1,Regular,,,£12.50,£0.00,£12.50,£2.08,T18229,Dine In,The Copper Pot,Payment
+06/11/2026,14:31,Drinks,Coke Can,1,Regular,,,£2.88,£0.00,£2.88,£0.48,T99181,Just Eat,The Copper Pot,Payment
+06/11/2026,18:37,Drinks,Coke Can,2,Regular,,,£5.76,£0.00,£5.76,£0.96,T69399,Deliveroo,The Copper Pot,Payment
+06/11/2026,13:44,Mains,Fish n Chips,1,Regular,,,£15.95,£0.00,£15.95,£2.66,T41994,Takeaway,The Copper Pot,Payment
+06/11/2026,19:31,Burgers,Cheeseburger,3,Regular,,,£46.56,£0.00,£46.56,£7.76,T55020,Deliveroo,The Copper Pot,Payment
+06/11/2026,20:04,Sides,Halloumi Fries,2,Regular,,,£14.94,£0.00,£14.94,£2.49,T25475,Deliveroo,The Copper Pot,Payment
+06/11/2026,16:09,Drinks,Coke Can,2,Regular,,,£5.00,£0.00,£5.00,£0.83,T74089,Takeaway,The Copper Pot,Payment
+06/11/2026,19:36,Pizza,Pizza Margherita,1,Regular,,,£10.50,£0.00,£10.50,£1.75,T51123,Dine In,The Copper Pot,Payment
+06/11/2026,18:37,Mains,Fish n Chips,1,Regular,,,£18.34,£0.00,£18.34,£3.06,T69795,Just Eat,The Copper Pot,Payment
+06/11/2026,18:44,Burgers,Cheeseburger,1,Regular,,,£15.52,£0.00,£15.52,£2.59,T97051,Deliveroo,The Copper Pot,Payment
+06/11/2026,21:36,Burgers,Cheeseburger,1,Regular,,,£15.52,£0.00,£15.52,£2.59,T99291,Deliveroo,The Copper Pot,Payment
+06/11/2026,22:24,Desserts,Sticky Toffee Pud,2,Regular,,,£16.68,£0.00,£16.68,£2.78,T97641,Deliveroo,The Copper Pot,Payment
+06/11/2026,16:10,Mains,Fish n Chips,1,Regular,,,£18.34,£0.00,£18.34,£3.06,T90074,Uber Eats,The Copper Pot,Payment
+06/11/2026,14:49,Burgers,Cheeseburger,2,Regular,,,£27.00,£0.00,£27.00,£4.50,T47674,Dine In,The Copper Pot,Payment
+06/11/2026,17:58,Burgers,Chkn Burger,1,Regular,,,£14.37,£0.00,£14.37,£2.40,T75078,Uber Eats,The Copper Pot,Payment
+06/11/2026,17:35,Burgers,Cheeseburger,1,Regular,,,£15.52,£0.00,£15.52,£2.59,T46416,Uber Eats,The Copper Pot,Payment
+07/11/2026,15:45,Burgers,Chkn Burger,2,Regular,,,£28.74,£0.00,£28.74,£4.79,T64433,Just Eat,The Copper Pot,Payment
+07/11/2026,13:05,Mains,Fish n Chips,2,Regular,,,£31.90,£0.00,£31.90,£5.32,T33097,Takeaway,The Copper Pot,Payment
+07/11/2026,11:31,Burgers,Chkn Burger,1,Regular,,,£12.50,£0.00,£12.50,£2.08,T87217,Takeaway,The Copper Pot,Payment
+07/11/2026,11:09,Burgers,Chkn Burger,1,Regular,,,£14.37,£0.00,£14.37,£2.40,T64912,Deliveroo,The Copper Pot,Payment
+07/11/2026,20:20,Drinks,Coke Can,1,Regular,,,£2.88,£0.00,£2.88,£0.48,T26448,Just Eat,The Copper Pot,Payment
+07/11/2026,21:43,Sides,Halloumi Fries,3,Regular,,,£22.41,£0.00,£22.41,£3.73,T17076,Just Eat,The Copper Pot,Payment
+07/11/2026,17:25,Pizza,Pizza Margherita,3,Regular,,,£36.21,£0.00,£36.21,£6.04,T61658,Uber Eats,The Copper Pot,Payment
+07/11/2026,11:12,Burgers,Cheeseburger,2,Regular,,,£31.04,£0.00,£31.04,£5.17,T18827,Uber Eats,The Copper Pot,Payment
+07/11/2026,12:21,Burgers,Chkn Burger,2,Regular,,,£25.00,£0.00,£25.00,£4.17,T88738,Takeaway,The Copper Pot,Payment
+07/11/2026,20:09,Burgers,Cheeseburger,1,Regular,,,£13.50,£0.00,£13.50,£2.25,T80335,Dine In,The Copper Pot,Payment
+07/11/2026,11:04,Burgers,Cheeseburger,1,Regular,,,£15.52,£0.00,£15.52,£2.59,T37256,Just Eat,The Copper Pot,Payment
+07/11/2026,21:16,Drinks,Coke Can,2,Regular,,,£5.00,£0.00,£5.00,£0.83,T55533,Takeaway,The Copper Pot,Payment
+07/11/2026,12:07,Drinks,Coke Can,1,Regular,,,£2.88,£0.00,£2.88,£0.48,T73972,Uber Eats,The Copper Pot,Payment
+07/11/2026,15:05,Pizza,Pizza Margherita,2,Regular,,,£24.14,£0.00,£24.14,£4.02,T28889,Uber Eats,The Copper Pot,Payment
+07/11/2026,18:53,Burgers,Cheeseburger,1,Regular,,,£15.52,£0.00,£15.52,£2.59,T31160,Deliveroo,The Copper Pot,Payment
+07/11/2026,19:23,Drinks,Coke Can,1,Regular,,,£2.50,£0.00,£2.50,£0.42,T29215,Takeaway,The Copper Pot,Payment
+07/11/2026,19:19,Sides,Halloumi Fries,3,Regular,,,£19.50,£0.00,£19.50,£3.25,T94268,Dine In,The Copper Pot,Payment
+07/11/2026,19:23,Desserts,Sticky Toffee Pud,1,Regular,,,£8.34,£0.00,£8.34,£1.39,T31894,Deliveroo,The Copper Pot,Payment
+07/11/2026,19:49,Mains,Fish n Chips,1,Regular,,,£18.34,£0.00,£18.34,£3.06,T75889,Just Eat,The Copper Pot,Payment
+07/11/2026,14:51,Mains,Fish n Chips,1,Regular,,,£18.34,£0.00,£18.34,£3.06,T41377,Just Eat,The Copper Pot,Payment
+07/11/2026,14:33,Desserts,Sticky Toffee Pud,2,Regular,,,£14.50,£0.00,£14.50,£2.42,T74589,Takeaway,The Copper Pot,Payment
+07/11/2026,15:30,Mains,Fish n Chips,1,Regular,,,£15.95,£0.00,£15.95,£2.66,T43970,Dine In,The Copper Pot,Payment
+07/11/2026,18:51,Burgers,Chkn Burger,3,Regular,,,£43.11,£0.00,£43.11,£7.18,T55812,Deliveroo,The Copper Pot,Payment
+07/11/2026,12:14,Mains,Fish n Chips,1,Regular,,,£15.95,£0.00,£15.95,£2.66,T71614,Takeaway,The Copper Pot,Payment
+07/11/2026,18:39,Burgers,Chkn Burger,1,Regular,,,£12.50,£0.00,£12.50,£2.08,T89988,Takeaway,The Copper Pot,Payment
+08/11/2026,21:22,Desserts,Sticky Toffee Pud,1,Regular,,,£8.34,£0.00,£8.34,£1.39,T94296,Uber Eats,The Copper Pot,Payment
+08/11/2026,22:48,Burgers,Cheeseburger,1,Regular,,,£15.52,£0.00,£15.52,£2.59,T36125,Uber Eats,The Copper Pot,Payment
+08/11/2026,21:21,Pizza,Pizza Margherita,1,Regular,,,£12.07,£0.00,£12.07,£2.01,T21370,Uber Eats,The Copper Pot,Payment
+08/11/2026,17:47,Desserts,Sticky Toffee Pud,2,Regular,,,£16.68,£0.00,£16.68,£2.78,T21130,Uber Eats,The Copper Pot,Payment
+08/11/2026,13:01,Sides,Halloumi Fries,1,Regular,,,£6.50,£0.00,£6.50,£1.08,T29811,Takeaway,The Copper Pot,Payment
+08/11/2026,20:52,Drinks,Coke Can,2,Regular,,,£5.00,£0.00,£5.00,£0.83,T88101,Takeaway,The Copper Pot,Payment
+08/11/2026,19:35,Pizza,Pizza Margherita,1,Regular,,,£10.50,£0.00,£10.50,£1.75,T27168,Takeaway,The Copper Pot,Payment
+08/11/2026,19:47,Burgers,Cheeseburger,1,Regular,,,£13.50,£0.00,£13.50,£2.25,T28251,Dine In,The Copper Pot,Payment
+08/11/2026,11:16,Pizza,Pizza Margherita,1,Regular,,,£10.50,£0.00,£10.50,£1.75,T37889,Takeaway,The Copper Pot,Payment
+08/11/2026,20:20,Mains,Fish n Chips,3,Regular,,,£47.85,£0.00,£47.85,£7.98,T43995,Takeaway,The Copper Pot,Payment
+08/11/2026,11:58,Drinks,Coke Can,2,Regular,,,£5.00,£0.00,£5.00,£0.83,T56371,Takeaway,The Copper Pot,Payment
+08/11/2026,17:52,Pizza,Pizza Margherita,3,Regular,,,£36.21,£0.00,£36.21,£6.04,T75752,Just Eat,The Copper Pot,Payment
+08/11/2026,19:32,Burgers,Chkn Burger,3,Regular,,,£37.50,£0.00,£37.50,£6.25,T12451,Takeaway,The Copper Pot,Payment
+08/11/2026,20:00,Desserts,Sticky Toffee Pud,2,Regular,,,£14.50,£0.00,£14.50,£2.42,T29634,Takeaway,The Copper Pot,Payment
+08/11/2026,20:46,Burgers,Chkn Burger,1,Regular,,,£14.37,£0.00,£14.37,£2.40,T25772,Uber Eats,The Copper Pot,Payment
+08/11/2026,21:33,Drinks,Coke Can,1,Regular,,,£2.88,£0.00,£2.88,£0.48,T79563,Deliveroo,The Copper Pot,Payment
+08/11/2026,19:03,Drinks,Coke Can,2,Regular,,,£5.00,£0.00,£5.00,£0.83,T42570,Dine In,The Copper Pot,Payment
+08/11/2026,12:32,Burgers,Chkn Burger,1,Regular,,,£12.50,£0.00,£12.50,£2.08,T69267,Dine In,The Copper Pot,Payment
+08/11/2026,18:20,Drinks,Coke Can,1,Regular,,,£2.50,£0.00,£2.50,£0.42,T90285,Dine In,The Copper Pot,Payment
+08/11/2026,14:44,Drinks,Coke Can,3,Regular,,,£8.64,£0.00,£8.64,£1.44,T46331,Just Eat,The Copper Pot,Payment
+08/11/2026,18:32,Pizza,Pizza Margherita,3,Regular,,,£36.21,£0.00,£36.21,£6.04,T42460,Just Eat,The Copper Pot,Payment
+08/11/2026,19:57,Sides,Halloumi Fries,3,Regular,,,£22.41,£0.00,£22.41,£3.73,T36553,Deliveroo,The Copper Pot,Payment
+08/11/2026,17:07,Desserts,Sticky Toffee Pud,2,Regular,,,£14.50,£0.00,£14.50,£2.42,T61427,Takeaway,The Copper Pot,Payment
+08/11/2026,21:15,Pizza,Pizza Margherita,1,Regular,,,£10.50,£0.00,£10.50,£1.75,T66143,Dine In,The Copper Pot,Payment
+08/11/2026,12:57,Burgers,Cheeseburger,1,Regular,,,£15.52,£0.00,£15.52,£2.59,T30243,Deliveroo,The Copper Pot,Payment
+09/11/2026,15:56,Sides,Halloumi Fries,1,Regular,,,£6.50,£0.00,£6.50,£1.08,T27990,Takeaway,The Copper Pot,Payment
+09/11/2026,17:56,Pizza,Pizza Margherita,1,Regular,,,£10.50,£0.00,£10.50,£1.75,T73866,Dine In,The Copper Pot,Payment
+09/11/2026,22:27,Burgers,Chkn Burger,1,Regular,,,£12.50,£0.00,£12.50,£2.08,T77581,Takeaway,The Copper Pot,Payment
+09/11/2026,14:22,Pizza,Pizza Margherita,1,Regular,,,£12.07,£0.00,£12.07,£2.01,T51749,Uber Eats,The Copper Pot,Payment
+09/11/2026,16:35,Burgers,Cheeseburger,1,Regular,,,£13.50,£0.00,£13.50,£2.25,T70118,Dine In,The Copper Pot,Payment
+09/11/2026,16:33,Pizza,Pizza Margherita,1,Regular,,,£12.07,£0.00,£12.07,£2.01,T91779,Uber Eats,The Copper Pot,Payment
+09/11/2026,12:58,Mains,Fish n Chips,3,Regular,,,£47.85,£0.00,£47.85,£7.98,T39957,Dine In,The Copper Pot,Payment
+09/11/2026,15:02,Burgers,Cheeseburger,1,Regular,,,£15.52,£0.00,£15.52,£2.59,T33796,Deliveroo,The Copper Pot,Payment
+09/11/2026,21:52,Mains,Fish n Chips,1,Regular,,,£18.34,£0.00,£18.34,£3.06,T43896,Uber Eats,The Copper Pot,Payment
+09/11/2026,19:36,Pizza,Pizza Margherita,1,Regular,,,£12.07,£0.00,£12.07,£2.01,T74829,Just Eat,The Copper Pot,Payment
+09/11/2026,15:03,Sides,Halloumi Fries,1,Regular,,,£6.50,£0.00,£6.50,£1.08,T34031,Dine In,The Copper Pot,Payment
+09/11/2026,11:40,Pizza,Pizza Margherita,1,Regular,,,£12.07,£0.00,£12.07,£2.01,T21608,Deliveroo,The Copper Pot,Payment
+09/11/2026,20:54,Desserts,Sticky Toffee Pud,1,Regular,,,£7.25,£0.00,£7.25,£1.21,T39151,Dine In,The Copper Pot,Payment
+09/11/2026,18:00,Burgers,Cheeseburger,1,Regular,,,£13.50,£0.00,£13.50,£2.25,T54453,Dine In,The Copper Pot,Payment
+09/11/2026,20:08,Drinks,Coke Can,2,Regular,,,£5.76,£0.00,£5.76,£0.96,T15663,Deliveroo,The Copper Pot,Payment
+09/11/2026,13:16,Drinks,Coke Can,1,Regular,,,£2.50,£0.00,£2.50,£0.42,T16603,Dine In,The Copper Pot,Payment
+09/11/2026,21:19,Burgers,Chkn Burger,1,Regular,,,£14.37,£0.00,£14.37,£2.40,T79610,Deliveroo,The Copper Pot,Payment
+09/11/2026,18:32,Desserts,Sticky Toffee Pud,1,Regular,,,£8.34,£0.00,£8.34,£1.39,T98100,Deliveroo,The Copper Pot,Payment
+09/11/2026,11:16,Burgers,Chkn Burger,1,Regular,,,£14.37,£0.00,£14.37,£2.40,T14843,Deliveroo,The Copper Pot,Payment
+09/11/2026,19:12,Burgers,Cheeseburger,1,Regular,,,£15.52,£0.00,£15.52,£2.59,T77401,Just Eat,The Copper Pot,Payment
+09/11/2026,12:42,Pizza,Pizza Margherita,1,Regular,,,£12.07,£0.00,£12.07,£2.01,T95210,Uber Eats,The Copper Pot,Payment
+09/11/2026,17:32,Pizza,Pizza Margherita,2,Regular,,,£24.14,£0.00,£24.14,£4.02,T50341,Just Eat,The Copper Pot,Payment
+09/11/2026,16:12,Sides,Halloumi Fries,1,Regular,,,£6.50,£0.00,£6.50,£1.08,T93358,Takeaway,The Copper Pot,Payment
+09/11/2026,11:53,Burgers,Chkn Burger,2,Regular,,,£28.74,£0.00,£28.74,£4.79,T27015,Deliveroo,The Copper Pot,Payment
+09/11/2026,17:10,Burgers,Cheeseburger,1,Regular,,,£15.52,£0.00,£15.52,£2.59,T17261,Deliveroo,The Copper Pot,Payment
+10/11/2026,21:18,Burgers,Cheeseburger,2,Regular,,,£31.04,£0.00,£31.04,£5.17,T88483,Just Eat,The Copper Pot,Payment
+10/11/2026,18:11,Burgers,Chkn Burger,1,Regular,,,£12.50,£0.00,£12.50,£2.08,T30648,Dine In,The Copper Pot,Payment
+10/11/2026,15:23,Mains,Fish n Chips,2,Regular,,,£31.90,£0.00,£31.90,£5.32,T53113,Dine In,The Copper Pot,Payment
+10/11/2026,11:56,Drinks,Coke Can,1,Regular,,,£2.50,£0.00,£2.50,£0.42,T50573,Takeaway,The Copper Pot,Payment
+10/11/2026,11:21,Burgers,Chkn Burger,1,Regular,,,£12.50,£0.00,£12.50,£2.08,T60020,Takeaway,The Copper Pot,Payment
+10/11/2026,19:41,Burgers,Cheeseburger,2,Regular,,,£31.04,£0.00,£31.04,£5.17,T36342,Deliveroo,The Copper Pot,Payment
+10/11/2026,12:16,Burgers,Chkn Burger,3,Regular,,,£37.50,£0.00,£37.50,£6.25,T21764,Dine In,The Copper Pot,Payment
+10/11/2026,11:25,Burgers,Chkn Burger,2,Regular,,,£28.74,£0.00,£28.74,£4.79,T12948,Just Eat,The Copper Pot,Payment
+10/11/2026,12:37,Mains,Fish n Chips,1,Regular,,,£15.95,£0.00,£15.95,£2.66,T79361,Takeaway,The Copper Pot,Payment
+10/11/2026,17:48,Desserts,Sticky Toffee Pud,1,Regular,,,£8.34,£0.00,£8.34,£1.39,T52747,Just Eat,The Copper Pot,Payment
+10/11/2026,15:46,Sides,Halloumi Fries,2,Regular,,,£13.00,£0.00,£13.00,£2.17,T91095,Takeaway,The Copper Pot,Payment
+10/11/2026,22:57,Sides,Halloumi Fries,1,Regular,,,£6.50,£0.00,£6.50,£1.08,T77237,Dine In,The Copper Pot,Payment
+10/11/2026,13:58,Sides,Halloumi Fries,2,Regular,,,£14.94,£0.00,£14.94,£2.49,T78649,Just Eat,The Copper Pot,Payment
+10/11/2026,11:52,Desserts,Sticky Toffee Pud,3,Regular,,,£25.02,£0.00,£25.02,£4.17,T99977,Just Eat,The Copper Pot,Payment
+10/11/2026,11:02,Drinks,Coke Can,1,Regular,,,£2.50,£0.00,£2.50,£0.42,T27444,Dine In,The Copper Pot,Payment
+10/11/2026,17:53,Sides,Halloumi Fries,1,Regular,,,£6.50,£0.00,£6.50,£1.08,T69164,Dine In,The Copper Pot,Payment
+10/11/2026,21:34,Drinks,Coke Can,1,Regular,,,£2.50,£0.00,£2.50,£0.42,T99216,Dine In,The Copper Pot,Payment
+10/11/2026,11:29,Burgers,Chkn Burger,2,Regular,,,£28.74,£0.00,£28.74,£4.79,T19189,Deliveroo,The Copper Pot,Payment
+10/11/2026,12:42,Sides,Halloumi Fries,3,Regular,,,£22.41,£0.00,£22.41,£3.73,T78942,Just Eat,The Copper Pot,Payment
+10/11/2026,12:54,Burgers,Cheeseburger,2,Regular,,,£31.04,£0.00,£31.04,£5.17,T44807,Deliveroo,The Copper Pot,Payment
+10/11/2026,22:41,Burgers,Chkn Burger,1,Regular,,,£12.50,£0.00,£12.50,£2.08,T70337,Takeaway,The Copper Pot,Payment
+10/11/2026,18:58,Pizza,Pizza Margherita,2,Regular,,,£21.00,£0.00,£21.00,£3.50,T99613,Dine In,The Copper Pot,Payment
+10/11/2026,21:41,Mains,Fish n Chips,1,Regular,,,£18.34,£0.00,£18.34,£3.06,T35990,Just Eat,The Copper Pot,Payment
+10/11/2026,16:16,Burgers,Cheeseburger,3,Regular,,,£40.50,£0.00,£40.50,£6.75,T95397,Takeaway,The Copper Pot,Payment
+10/11/2026,20:08,Sides,Halloumi Fries,1,Regular,,,£7.47,£0.00,£7.47,£1.24,T11634,Just Eat,The Copper Pot,Payment
+11/11/2026,15:43,Pizza,Pizza Margherita,1,Regular,,,£12.07,£0.00,£12.07,£2.01,T23044,Uber Eats,The Copper Pot,Payment
+11/11/2026,15:45,Sides,Halloumi Fries,1,Regular,,,£7.47,£0.00,£7.47,£1.24,T77703,Uber Eats,The Copper Pot,Payment
+11/11/2026,18:49,Mains,Fish n Chips,2,Regular,,,£36.68,£0.00,£36.68,£6.11,T25532,Uber Eats,The Copper Pot,Payment
+11/11/2026,12:59,Drinks,Coke Can,1,Regular,,,£2.88,£0.00,£2.88,£0.48,T71989,Deliveroo,The Copper Pot,Payment
+11/11/2026,12:52,Burgers,Cheeseburger,1,Regular,,,£15.52,£0.00,£15.52,£2.59,T76403,Uber Eats,The Copper Pot,Payment
+11/11/2026,14:58,Pizza,Pizza Margherita,1,Regular,,,£12.07,£0.00,£12.07,£2.01,T37618,Uber Eats,The Copper Pot,Payment
+11/11/2026,13:47,Burgers,Cheeseburger,3,Regular,,,£40.50,£0.00,£40.50,£6.75,T78690,Dine In,The Copper Pot,Payment
+11/11/2026,20:52,Mains,Fish n Chips,1,Regular,,,£15.95,£0.00,£15.95,£2.66,T92794,Takeaway,The Copper Pot,Payment
+11/11/2026,22:23,Drinks,Coke Can,1,Regular,,,£2.50,£0.00,£2.50,£0.42,T40327,Dine In,The Copper Pot,Payment
+11/11/2026,11:10,Pizza,Pizza Margherita,2,Regular,,,£24.14,£0.00,£24.14,£4.02,T10470,Uber Eats,The Copper Pot,Payment
+11/11/2026,15:46,Pizza,Pizza Margherita,2,Regular,,,£24.14,£0.00,£24.14,£4.02,T28442,Uber Eats,The Copper Pot,Payment
+11/11/2026,16:07,Pizza,Pizza Margherita,1,Regular,,,£12.07,£0.00,£12.07,£2.01,T53427,Uber Eats,The Copper Pot,Payment
+11/11/2026,17:07,Burgers,Cheeseburger,1,Regular,,,£15.52,£0.00,£15.52,£2.59,T35656,Deliveroo,The Copper Pot,Payment
+11/11/2026,15:23,Sides,Halloumi Fries,1,Regular,,,£7.47,£0.00,£7.47,£1.24,T18516,Deliveroo,The Copper Pot,Payment
+11/11/2026,12:23,Pizza,Pizza Margherita,2,Regular,,,£24.14,£0.00,£24.14,£4.02,T66105,Just Eat,The Copper Pot,Payment
+11/11/2026,15:06,Desserts,Sticky Toffee Pud,1,Regular,,,£7.25,£0.00,£7.25,£1.21,T16765,Dine In,The Copper Pot,Payment
+11/11/2026,14:17,Desserts,Sticky Toffee Pud,1,Regular,,,£7.25,£0.00,£7.25,£1.21,T67178,Takeaway,The Copper Pot,Payment
+11/11/2026,16:50,Drinks,Coke Can,1,Regular,,,£2.50,£0.00,£2.50,£0.42,T66065,Takeaway,The Copper Pot,Payment
+11/11/2026,19:13,Burgers,Cheeseburger,2,Regular,,,£31.04,£0.00,£31.04,£5.17,T20561,Just Eat,The Copper Pot,Payment
+11/11/2026,20:48,Burgers,Cheeseburger,2,Regular,,,£31.04,£0.00,£31.04,£5.17,T28162,Uber Eats,The Copper Pot,Payment
+11/11/2026,11:58,Sides,Halloumi Fries,1,Regular,,,£7.47,£0.00,£7.47,£1.24,T82103,Uber Eats,The Copper Pot,Payment
+11/11/2026,17:21,Burgers,Chkn Burger,1,Regular,,,£14.37,£0.00,£14.37,£2.40,T46929,Uber Eats,The Copper Pot,Payment
+11/11/2026,17:41,Mains,Fish n Chips,1,Regular,,,£18.34,£0.00,£18.34,£3.06,T41282,Deliveroo,The Copper Pot,Payment
+11/11/2026,21:25,Mains,Fish n Chips,2,Regular,,,£36.68,£0.00,£36.68,£6.11,T25694,Just Eat,The Copper Pot,Payment
+11/11/2026,14:32,Burgers,Chkn Burger,1,Regular,,,£12.50,£0.00,£12.50,£2.08,T75152,Dine In,The Copper Pot,Payment
+12/11/2026,16:48,Drinks,Coke Can,1,Regular,,,£2.88,£0.00,£2.88,£0.48,T68977,Uber Eats,The Copper Pot,Payment
+12/11/2026,14:15,Pizza,Pizza Margherita,1,Regular,,,£12.07,£0.00,£12.07,£2.01,T21890,Just Eat,The Copper Pot,Payment
+12/11/2026,12:20,Burgers,Chkn Burger,1,Regular,,,£14.37,£0.00,£14.37,£2.40,T41342,Just Eat,The Copper Pot,Payment
+12/11/2026,14:56,Mains,Fish n Chips,1,Regular,,,£18.34,£0.00,£18.34,£3.06,T12632,Just Eat,The Copper Pot,Payment
+12/11/2026,17:47,Sides,Halloumi Fries,2,Regular,,,£14.94,£0.00,£14.94,£2.49,T78703,Uber Eats,The Copper Pot,Payment
+12/11/2026,16:48,Burgers,Chkn Burger,2,Regular,,,£28.74,£0.00,£28.74,£4.79,T18134,Deliveroo,The Copper Pot,Payment
+12/11/2026,16:08,Pizza,Pizza Margherita,1,Regular,,,£12.07,£0.00,£12.07,£2.01,T75981,Just Eat,The Copper Pot,Payment
+12/11/2026,15:57,Drinks,Coke Can,1,Regular,,,£2.50,£0.00,£2.50,£0.42,T42565,Dine In,The Copper Pot,Payment
+12/11/2026,17:19,Pizza,Pizza Margherita,2,Regular,,,£24.14,£0.00,£24.14,£4.02,T12858,Uber Eats,The Copper Pot,Payment
+12/11/2026,22:48,Burgers,Chkn Burger,1,Regular,,,£14.37,£0.00,£14.37,£2.40,T72032,Uber Eats,The Copper Pot,Payment
+12/11/2026,12:25,Drinks,Coke Can,2,Regular,,,£5.00,£0.00,£5.00,£0.83,T79187,Dine In,The Copper Pot,Payment
+12/11/2026,14:50,Desserts,Sticky Toffee Pud,2,Regular,,,£16.68,£0.00,£16.68,£2.78,T24292,Uber Eats,The Copper Pot,Payment
+12/11/2026,19:43,Burgers,Chkn Burger,1,Regular,,,£12.50,£0.00,£12.50,£2.08,T24272,Takeaway,The Copper Pot,Payment
+12/11/2026,19:49,Desserts,Sticky Toffee Pud,2,Regular,,,£14.50,£0.00,£14.50,£2.42,T15183,Dine In,The Copper Pot,Payment
+12/11/2026,20:58,Burgers,Cheeseburger,1,Regular,,,£13.50,£0.00,£13.50,£2.25,T14927,Takeaway,The Copper Pot,Payment
+12/11/2026,21:16,Sides,Halloumi Fries,1,Regular,,,£6.50,£0.00,£6.50,£1.08,T79239,Takeaway,The Copper Pot,Payment
+12/11/2026,12:04,Sides,Halloumi Fries,2,Regular,,,£13.00,£0.00,£13.00,£2.17,T49367,Dine In,The Copper Pot,Payment
+12/11/2026,17:16,Drinks,Coke Can,3,Regular,,,£7.50,£0.00,£7.50,£1.25,T39305,Takeaway,The Copper Pot,Payment
+12/11/2026,11:34,Desserts,Sticky Toffee Pud,3,Regular,,,£21.75,£0.00,£21.75,£3.62,T49520,Dine In,The Copper Pot,Payment
+12/11/2026,21:53,Pizza,Pizza Margherita,1,Regular,,,£12.07,£0.00,£12.07,£2.01,T41766,Deliveroo,The Copper Pot,Payment
+12/11/2026,19:15,Pizza,Pizza Margherita,3,Regular,,,£31.50,£0.00,£31.50,£5.25,T13837,Takeaway,The Copper Pot,Payment
+12/11/2026,11:12,Pizza,Pizza Margherita,1,Regular,,,£10.50,£0.00,£10.50,£1.75,T75314,Dine In,The Copper Pot,Payment
+12/11/2026,15:14,Sides,Halloumi Fries,2,Regular,,,£13.00,£0.00,£13.00,£2.17,T97471,Dine In,The Copper Pot,Payment
+12/11/2026,18:02,Pizza,Pizza Margherita,1,Regular,,,£10.50,£0.00,£10.50,£1.75,T54309,Takeaway,The Copper Pot,Payment
+12/11/2026,21:25,Sides,Halloumi Fries,2,Regular,,,£14.94,£0.00,£14.94,£2.49,T35962,Deliveroo,The Copper Pot,Payment
+11/11/2026,13:10,Burgers,Cheeseburger,abc,Regular,,,£13.50,£0.00,£13.50,£2.25,T00001,Dine In,The Copper Pot,Payment
+31/02/2026,13:10,Mains,Fish n Chips,1,Regular,,,£15.95,£0.00,£15.95,£2.66,T00002,Dine In,The Copper Pot,Payment

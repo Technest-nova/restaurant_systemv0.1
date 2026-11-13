@@ -1,0 +1,7 @@
+date,item_name,channel,quantity,gross_sales
+2026-11-09,Cheeseburger,in_house,14,189.00
+2026-11-09,Cheeseburger,deliveroo,6,93.12
+2026-11-09,Fish n Chips,in_house,9,143.55
+2026-11-09,Coke Can,uber_eats,8,20.00
+2026-11-10,Pizza Margherita,just_eat,5,60.40
+2026-11-10,Halloumi Fries,in_house,7,45.50
